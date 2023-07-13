@@ -1,0 +1,91 @@
+body{
+    background-image: url(img/fondo.jpg);
+    background-size:  cover;
+    background-repeat: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: antiquewhite;
+}
+
+main{
+    margin:40px auto;
+    display: flex;
+    width: 70%;
+    align-items: center;
+    
+}
+h4{
+    color: black;
+    text-shadow: -1px 5 rgba(242, 239, 239, 0.2), 0 3px black,
+	  1px 0 rgb(0, 0, 0), 0 -5px rgb(0, 0, 0)
+}
+h3{
+    text-align: center;
+    color:black;
+    text-shadow: rgb(255, 255, 255) 0.1em 0.1em 0.2em
+}
+.section1{
+    padding: 0px 30px 30px 30px;
+    
+}
+button{
+    background-color: rgb(169, 239, 246);
+    box-shadow: inset 0 -3em 3em rgba(65, 63, 63, 0.118), 0.1em 0.1em 0.2em rgba(63, 61, 61, 0.343);
+    height: 130px;
+    width: 160px;
+    margin: 10px;
+    font-size: 20px;
+    color:rgb(0, 0, 0);
+    border-radius: 20px;
+    
+}
+button:hover{
+    background-color: rgb(180, 233, 124);
+    
+}
+.section2{
+    background-color: rgba(165, 248, 114, 0.742) ;
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    margin-left: 40px;
+    padding-right: 10px;
+    box-shadow: inset 0 -3em 3em rgba(136, 134, 134, 0.328), 0.1em 0.1em 0.2em rgba(135, 35, 35, 0.65);
+}
+h3{
+    text-align: center;
+    color:black;
+    margin-top: 30px;
+}
+nav ul{
+    padding-left: 20px;
+}
+nav ul li{
+  list-style: none;  
+  text-align: left; 
+  margin-top: 3px;
+}
+ 
+nav ul li a{
+      
+    text-decoration: none;
+    background-color: rgba(244, 181, 65, 0.731);
+    border-radius: 30px;
+    padding: 8px;
+    color: black;
+    box-shadow: black 0.1em 0.1em 0.2em;
+  
+}
+
+#volver{
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    margin-top: 5px;
+    margin-left: 10px;
+    border-style: groove;
+    background-color: rgba(251, 105, 105, 0.881);
+    box-shadow: black 0.1em 0.1em 0.2em;
+    color: antiquewhite;
+    border-radius: 50px;
+    font-size: medium ;
+}
