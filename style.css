@@ -1,164 +1,136 @@
-/* =======================
+/* =========================
    ESTILOS GENERALES
-======================= */
+========================= */
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-image: url('img/fondo.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: antiquewhite;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url('img/fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: antiquewhite;
 }
 
-/* =======================
-   BARRA SUPERIOR
-======================= */
+/* =========================
+   HEADER
+========================= */
 .header {
-  background-color: #111;
-  color: #fff;
-  text-align: center;
-  padding: 15px 0;
-  font-weight: bold;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    background-color: #212529;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1.5rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
 }
 
-/* =======================
-   MAIN (CARTAS Y MENU)
-======================= */
+/* =========================
+   MAIN
+========================= */
 main {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  margin: 40px auto;
-  gap: 50px; /* separación entre memorama y menú */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 40px;
 }
 
-/* =======================
+/* =========================
    MEMORAMA
-======================= */
-.section1 {
-  display: grid;
-  grid-template-columns: repeat(4, 100px);
-  grid-gap: 15px;
-  perspective: 1000px;
+========================= */
+.section1 table {
+    border-spacing: 10px;
 }
 
 .carta {
-  width: 100px;
-  height: 100px;
-  font-size: 2rem;
-  font-weight: bold;
-  border-radius: 10px;
-  background-color: #555;
-  color: #fff;
-  cursor: pointer;
-  border: none;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    font-size: 1.2em; /* escala con el tamaño de la carta */
-    line-height: 1.2em;
-}
+    width: 120px;
+    height: 120px;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    word-wrap: break-word;
+    border-radius: 10px;
+    background-color: #444;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .carta:hover {
-  transform: rotateY(15deg) scale(1.05);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    background-color: #0d3b66; /* azul oscuro al pasar */
 }
 
-/* Carta correcta */
 .carta.correcta {
-  background-color: #28a745;
-  color: #fff;
+    background-color: #28a745; /* verde al ser correcta */
 }
 
-/* =======================
+/* =========================
    MENU
-======================= */
+========================= */
 .section2 {
-  background-color: rgba(0,0,0,0.6);
-  padding: 20px;
-  border-radius: 15px;
-  width: 200px;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+    width: 200px;
+    background: rgba(33,33,33,0.8);
+    border-radius: 10px;
+    padding: 20px;
 }
 
 .section2 h3 {
-  color: #ffd43b;
-  text-align: center;
-  margin-bottom: 15px;
+    text-align: center;
+    margin-bottom: 15px;
 }
 
-nav ul {
-  list-style: none;
+.section2 ul {
+    list-style: none;
 }
 
-nav ul li {
-  margin-bottom: 10px;
+.section2 ul li {
+    margin-bottom: 10px;
 }
 
-nav ul li a {
-  display: block;
-  text-decoration: none;
-  color: #fff;
-  background-color: #444;
-  padding: 10px;
-  border-radius: 10px;
-  text-align: center;
-  transition: all 0.3s ease;
+.section2 ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 8px;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
 }
 
-nav ul li a:hover {
-  background-color: #003366; /* azul oscuro */
-  color: #fff;
-  transform: scale(1.05);
+.section2 ul li a:hover {
+    background-color: #0d3b66;
+    color: #fff;
 }
 
-/* Botón volver */
 #volver {
-  width: 100%;
-  padding: 10px;
-  border-radius: 50px;
-  border: none;
-  background-color: #ff4444;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    background-color: #ffd43b;
+    color: #222;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 #volver:hover {
-  background-color: #28a745;
-  transform: scale(1.05);
+    background-color: #f0a500;
 }
 
-/* =======================
-   RESPONSIVE
-======================= */
-@media (max-width: 768px) {
-  main {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .section1 {
-    grid-template-columns: repeat(4, 80px);
-  }
-
-  .section2 {
-    width: 80%;
-  }
+/* =========================
+   FOOTER
+========================= */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #212529;
+    color: white;
+    margin-top: 40px;
+    box-shadow: 0 -3px 6px rgba(0,0,0,0.3);
 }
