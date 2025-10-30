@@ -66,6 +66,9 @@ main {
   border: none;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    font-size: 1.2em; /* escala con el tamaño de la carta */
+    line-height: 1.2em;
+}
 }
 
 .carta:hover {
