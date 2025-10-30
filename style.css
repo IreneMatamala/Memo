@@ -1,6 +1,25 @@
-/* ========================
-   ENCABEZADO
-======================== */
+/* =======================
+   RESET & BODY
+======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url('img/fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: antiquewhite;
+    padding-top: 70px; /* espacio para el header */
+}
+
+/* =======================
+   HEADER
+======================= */
 header {
     background-color: #000;
     color: #fff;
@@ -14,66 +33,67 @@ header {
     z-index: 1000;
 }
 
-/* ========================
-   MAIN
-======================== */
-body {
-    margin: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #f0f0f0;
-    padding-top: 70px; /* Para no tapar el header */
-}
-
+/* =======================
+   MAIN CONTAINER
+======================= */
 .main-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
     padding: 20px;
 }
 
-/* ========================
-   TARJETAS
-======================== */
+/* =======================
+   MEMORAMA - CARTAS
+======================= */
 .section1 table {
-    border-collapse: separate;
-    border-spacing: 10px;
+    border-collapse: collapse;
 }
 
 .carta {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
     background-color: #ddd;
     border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
     border: 2px solid #999;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000;
+    transition: all 0.3s ease;
 }
 
 .carta:hover {
-    background-color: #003366; /* azul oscuro al pasar el ratón */
+    background-color: #003366;
     color: #fff;
 }
 
 .carta.correcta {
-    background-color: #28a745 !important; /* verde cuando es correcta */
+    background-color: #28a745 !important;
+    color: #fff;
 }
 
-/* ========================
-   MENÚ LATERAL
-======================== */
+/* =======================
+   MENU LATERAL
+======================= */
 .section2 {
     width: 200px;
-    padding: 10px;
-    background-color: #e0e0e0;
+    padding: 15px;
+    background-color: rgba(0,0,0,0.5);
     border-radius: 10px;
+    color: #fff;
+    text-align: center;
 }
 
 .section2 h3 {
-    text-align: center;
+    margin-bottom: 15px;
 }
 
 .section2 ul {
     list-style: none;
-    padding: 0;
+    padding-left: 0;
 }
 
 .section2 ul li {
@@ -81,12 +101,12 @@ body {
 }
 
 .section2 ul li a {
+    color: #fff;
     text-decoration: none;
-    color: #000;
-    padding: 5px 10px;
-    display: block;
+    padding: 8px 12px;
     border-radius: 5px;
-    transition: all 0.3s;
+    display: block;
+    transition: all 0.3s ease;
 }
 
 .section2 ul li a:hover {
@@ -94,21 +114,18 @@ body {
     color: #fff;
 }
 
-/* ========================
-   BOTÓN VOLVER
-======================== */
 #volver {
     margin-top: 20px;
-    width: 100%;
-    padding: 8px;
-    border-radius: 5px;
+    padding: 10px 20px;
     border: none;
-    background-color: #003366;
-    color: #fff;
+    border-radius: 50px;
+    background-color: #ffd43b;
+    color: #222;
+    font-weight: bold;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 #volver:hover {
-    background-color: #28a745;
+    background-color: #f0a500;
 }
-
