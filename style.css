@@ -1,134 +1,114 @@
-/* =======================
-   BARRA SUPERIOR
-======================= */
+/* ========================
+   ENCABEZADO
+======================== */
 header {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
-    height: 60px;
-    background-color: #222; /* fondo negro */
-    color: #fff;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
     z-index: 1000;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    letter-spacing: 1px;
 }
 
-/* =======================
-   ESTILOS GENERALES
-======================= */
+/* ========================
+   MAIN
+======================== */
 body {
-    background-image: url(img/fondo.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: antiquewhite;
-    padding-top: 70px; /* deja espacio para la barra */
+    background-color: #f0f0f0;
+    padding-top: 70px; /* Para no tapar el header */
 }
 
-main {
-    margin: 40px auto;
+.main-container {
     display: flex;
-    width: 70%;
-    align-items: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
 }
 
-/* =======================
+/* ========================
    TARJETAS
-======================= */
-button {
-    background-color: rgb(169, 239, 246);
-    box-shadow: inset 0 -3em 3em rgba(65, 63, 63, 0.118), 0.1em 0.1em 0.2em rgba(63, 61, 61, 0.343);
-    height: 130px;
-    width: 160px;
-    margin: 10px;
-    font-size: 20px;
-    color: rgb(0, 0, 0);
-    border-radius: 20px;
+======================== */
+.section1 table {
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.carta {
+    width: 80px;
+    height: 80px;
+    background-color: #ddd;
+    border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
+    border: 2px solid #999;
 }
 
-/* Hover azul oscuro */
-button:hover {
-    background-color: #0d47a1; /* azul oscuro */
+.carta:hover {
+    background-color: #003366; /* azul oscuro al pasar el ratón */
     color: #fff;
 }
 
-/* Seleccionada verde */
-button.selected {
-    background-color: #2e7d32; /* verde */
-    color: #fff;
+.carta.correcta {
+    background-color: #28a745 !important; /* verde cuando es correcta */
 }
 
-/* =======================
-   SECCIÓN 2
-======================= */
+/* ========================
+   MENÚ LATERAL
+======================== */
 .section2 {
-    background-color: rgba(165, 248, 114, 0.742);
-    width: 300px;
-    height: 300px;
-    border-radius: 5px;
-    margin-left: 40px;
-    padding-right: 10px;
-    box-shadow: inset 0 -3em 3em rgba(136, 134, 134, 0.328), 0.1em 0.1em 0.2em rgba(135, 35, 35, 0.65);
-}
-
-/* =======================
-   TEXTOS
-======================= */
-h3 {
-    text-align: center;
-    color: black;
-    margin-top: 30px;
-}
-
-h4 {
-    color: black;
-    text-shadow: -1px 5 rgba(242, 239, 239, 0.2), 0 3px black,
-                 1px 0 rgb(0,0,0), 0 -5px rgb(0,0,0);
-}
-
-/* =======================
-   NAV
-======================= */
-nav ul {
-    padding-left: 20px;
-}
-
-nav ul li {
-    list-style: none;
-    text-align: left;
-    margin-top: 3px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    background-color: rgba(244, 181, 65, 0.731);
-    border-radius: 30px;
-    padding: 8px;
-    color: black;
-    box-shadow: black 0.1em 0.1em 0.2em;
-}
-
-/* Botón volver */
-#volver {
-    width: fit-content;
-    height: fit-content;
+    width: 200px;
     padding: 10px;
-    margin-top: 5px;
-    margin-left: 10px;
-    border-style: groove;
-    background-color: rgba(251, 105, 105, 0.881);
-    box-shadow: black 0.1em 0.1em 0.2em;
-    color: antiquewhite;
-    border-radius: 50px;
-    font-size: medium;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+}
+
+.section2 h3 {
+    text-align: center;
+}
+
+.section2 ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section2 ul li {
+    margin: 10px 0;
+}
+
+.section2 ul li a {
+    text-decoration: none;
+    color: #000;
+    padding: 5px 10px;
+    display: block;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.section2 ul li a:hover {
+    background-color: #003366;
+    color: #fff;
+}
+
+/* ========================
+   BOTÓN VOLVER
+======================== */
+#volver {
+    margin-top: 20px;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: #003366;
+    color: #fff;
+    cursor: pointer;
+}
+
+#volver:hover {
+    background-color: #28a745;
 }
 
